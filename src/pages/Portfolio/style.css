@@ -1,0 +1,29 @@
+:root{
+    --background: #212227;
+    --text: #BDD4E7;
+    --border: #8693AB;
+    --font: 'Vollkorn', serif;
+}
+.my-masonry-grid {
+    display: -webkit-box; /* Not needed if autoprefixing */
+    display: -ms-flexbox; /* Not needed if autoprefixing */
+    display: flex;
+    margin-left: -10px; /* gutter size offset */
+    width: auto;
+  }
+  .my-masonry-grid_column {
+    padding-left: 10px; /* gutter size */
+    background-clip: padding-box;
+    margin-left: 20px;
+    
+  }
+  
+  /* Style your items */
+  .my-masonry-grid_column > div { /* change div to reference your elements you put in <Masonry> */
+    margin-bottom: 10px;
+  }
+
+  .css-1e0t291-MuiPaper-root-MuiCard-root{
+    background-color: var(--background);
+    color:var(--text);
+  }

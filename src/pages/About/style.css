@@ -1,0 +1,83 @@
+:root{
+    --background: #212227;
+    --text: #BDD4E7;
+    --border: #8693AB;
+    --font: 'Vollkorn', serif;
+}
+
+
+#about-div{
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 20px;
+    border: 5px solid var(--border);
+    border-radius: 10px;
+   
+
+}
+
+p{
+    font-size: 15px;
+}
+
+li{
+    font-size: 20px;
+}
+
+#about-cards-div{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.about-card{
+    display: flex;
+    margin: 30px;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+button{
+    margin: 10px;
+}
+
+#education-div, #achievement-div, #hobbies-div{
+    margin: 20px;
+}
+
+
+
+
+
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.my-masonry-grid {
+    display: -webkit-box; /* Not needed if autoprefixing */
+    display: -ms-flexbox; /* Not needed if autoprefixing */
+    display: flex;
+    margin-left: -10px; /* gutter size offset */
+    width: auto;
+  }
+.my-masonry-grid_column {
+    padding-left: 10px; /* gutter size */
+    background-clip: padding-box;
+    margin-left: 20px;
+}
+
+/* Style your items */
+.my-masonry-grid_column > div { /* change div to reference your elements you put in <Masonry> */
+    margin: 30px;
+
+}
