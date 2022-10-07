@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './style.css'
-import Masonry from 'react-masonry-css'
+
 
 const About = () => {
     const [expanded, setExpanded] = useState([false,false,false])
@@ -12,18 +12,6 @@ const About = () => {
         })
     }
 
-    const breakpoints = {
-        default: 4,
-        1500: 3,
-        1100: 2,
-        700: 1
-    }
-    
-
-
-    
-    
-
 
     return(
         <div id="about-div">
@@ -33,8 +21,10 @@ const About = () => {
             <div id="about-cards-div">
 
             <div className='about-card'>
-                <h2>Education</h2>
-                <button onClick={() => open(0)}>More Info</button>
+                <div className='about-title'>
+                    <h2>Education</h2>
+                    <button onClick={() => open(0)}>{expanded[0] ? 'Less Info' : 'More Info'}</button>
+                </div>
                 <div id="education-div" hidden={!expanded[0]}>
                     <ul>
                         <li>Secondary School: The Blue Coat School</li>
@@ -47,8 +37,10 @@ const About = () => {
                 </div>
             </div>
             <div className='about-card'>
-                <h2>Awards and Achievements</h2>
-                <button onClick={() => open(1)}>More Info</button>
+                <div className='about-title'>
+                    <h2>Awards & Achievements</h2>
+                    <button onClick={() => open(1)}>{expanded[1] ? 'Less Info' : 'More Info'}</button>
+                </div>
                 <div id="achievement-div" hidden={!expanded[1]}>
                     <ul>
                         <li>Oldham educational award for outstanding GCSE results (2016)</li>
@@ -68,8 +60,10 @@ const About = () => {
                 </div>
             </div>
             <div className='about-card'>
-                <h2>Hobbies & Interests</h2>
-                <button onClick={() => open(2)}>More Info</button>
+                <div className='about-title'>
+                    <h2>Hobbies & Interests</h2>
+                    <button onClick={() => open(2)}>{expanded[2] ? 'Less Info' : 'More Info'}</button>
+                </div>
                 <div id="hobbies-div" hidden={!expanded[2]}>
 
                 <ul>
